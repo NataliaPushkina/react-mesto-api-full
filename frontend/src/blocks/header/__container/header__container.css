@@ -1,0 +1,11 @@
+.header__container {
+  margin: 0 10px 0 0;
+  display: flex;
+  align-self: center;
+}
+
+@media screen and (max-width: 500px) {
+  .header__container {
+    display: none;
+  }
+}
