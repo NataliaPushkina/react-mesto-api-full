@@ -1,4 +1,4 @@
-export const BASE_URL = 'http://localhost:4000';
+export const BASE_URL = 'http://api.pushkina.nomorepartiesxyz.ru';
 
 const getResponseData = (res) => {
   if (!res.ok) {
