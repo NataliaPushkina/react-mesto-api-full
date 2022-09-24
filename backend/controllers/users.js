@@ -1,6 +1,8 @@
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const User = require('../models/user');
+
+const { NODE_ENV, JWT_SECRET } = process.env;
 const NotFoundError = require('../middlewares/errors/not-found-error');
 const BedReqError = require('../middlewares/errors/bed-req-error');
 const ConflictError = require('../middlewares/errors/conflict-error');
@@ -109,7 +111,7 @@ const login = async (req, res, next) => {
     }
     const token = jwt.sign(
       { _id: user._id },
-      process.env['JWT-SECRET'],
+      NODE_ENV === 'production' ? JWT_SECRET : 'dev-secret',
     );
     res.cookie('jwt', token, {
       maxAge: 3600000,

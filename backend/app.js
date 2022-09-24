@@ -16,7 +16,7 @@ const NotFoundError = require('./middlewares/errors/not-found-error');
 const handleError = require('./middlewares/errors/error');
 const { requestLogger, errorLogger } = require('./middlewares/logger');
 
-const { PORT = 3000 } = process.env;
+const { PORT = 4000 } = process.env;
 
 const app = express();
 
@@ -27,7 +27,7 @@ app.use(cookieParser());
 
 app.use(
   cors({
-    origin: ['http://localhost:3000', 'pushkina.nomorepartiesxyz.ru', 'api.pushkina.nomorepartiesxyz.ru'],
+    origin: ['pushkina.nomorepartiesxyz.ru', 'http://localhost:3000', 'api.pushkina.nomorepartiesxyz.ru'],
     credentials: true,
   }),
 );
