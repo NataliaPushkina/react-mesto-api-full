@@ -123,6 +123,6 @@ class Api {
   // }
 }
 
-const api = new Api('http://api.pushkina.nomorepartiesxyz.ru');
+const api = new Api('https://api.pushkina.nomorepartiesxyz.ru');
 // api.setAuth(localStorage.getItem('token'));
 export default api;
