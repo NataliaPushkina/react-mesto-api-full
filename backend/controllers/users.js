@@ -113,6 +113,7 @@ const login = async (req, res, next) => {
       { _id: user._id },
       NODE_ENV === 'production' ? JWT_SECRET : 'dev-secret',
     );
+    console.log(NODE_ENV);
     res.cookie('jwt', token, {
       maxAge: 3600000,
       httpOnly: true,
@@ -143,10 +144,9 @@ const getUserInfo = async (req, res, next) => {
 
 const logout = async (req, res, next) => {
   try {
-    console.log('logout');
     res.clearCookie('jwt');
     res.send({ message: 'Bye!' });
-    // res.redirect('/signin');
+    res.redirect('/signin');
     res.end();
   } catch (err) {
     next(err);
