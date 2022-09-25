@@ -113,12 +113,11 @@ const login = async (req, res, next) => {
       { _id: user._id },
       NODE_ENV === 'production' ? JWT_SECRET : 'dev-secret',
     );
-    console.log(NODE_ENV);
     res.cookie('jwt', token, {
       maxAge: 3600000,
       httpOnly: true,
-      // sameSite: 'None',
-      // secure: true,
+      sameSite: 'None',
+      secure: true,
     });
     return res.send(user.hidePassword());
   } catch (err) {
