@@ -116,7 +116,7 @@ const login = async (req, res, next) => {
     res.cookie('jwt', token, {
       maxAge: 3600000,
       httpOnly: true,
-      sameSite: 'None',
+      sameSite: 'none',
       secure: true,
     });
     return res.send(user.hidePassword());
@@ -143,8 +143,7 @@ const getUserInfo = async (req, res, next) => {
 
 const logout = async (req, res, next) => {
   try {
-    await res.clearCookie('jwt');
-    res.send({ message: 'Bye!' });
+    await res.clearCookie('jwt').send({ message: 'Bye!' });
     // res.redirect('/signin');
     // res.end();
   } catch (err) {

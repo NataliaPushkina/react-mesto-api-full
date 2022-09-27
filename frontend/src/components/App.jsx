@@ -255,17 +255,16 @@ function App() {
   // }, []);
 
   useEffect(() => {
-    if (loggedIn) {
     api
       .getUserInfo()
       .then((userData) => {
+        setLoggedIn(true);
         setCurrentUser(userData);
         history.push('/');
       })
       .catch((err) => {
         console.log(err);
       });
-    }
   }, [loggedIn, history]);
 
   useEffect(() => {
@@ -281,6 +280,8 @@ function App() {
         });
     }
   }, [loggedIn, history]);
+
+  console.log(loggedIn);
 
   // useEffect(() => {
   //   if (loggedIn) {
