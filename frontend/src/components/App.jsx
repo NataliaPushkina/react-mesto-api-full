@@ -166,7 +166,6 @@ function App() {
     api
       .updateAvatar(avatar)
       .then((res) => {
-        console.log(res);
         setCurrentUser(res);
         closeAllPopups();
       })
@@ -254,6 +253,7 @@ function App() {
   // useEffect(() => {
   //   tokenCheck();
   // }, []);
+
   useEffect(() => {
     if (loggedIn) {
     api
@@ -281,6 +281,12 @@ function App() {
         });
     }
   }, [loggedIn, history]);
+
+  // useEffect(() => {
+  //   if (loggedIn) {
+  //     history.push("/");
+  //   }
+  // }, [loggedIn, history]);
 
   return (
     <CurrentUserContext.Provider value={currentUser}>

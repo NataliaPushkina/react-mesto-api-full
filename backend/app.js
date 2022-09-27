@@ -27,7 +27,7 @@ app.use(cookieParser());
 
 app.use(
   cors({
-    origin: ['https://pushkina.nomorepartiesxyz.ru'],
+    origin: ['https://pushkina.nomorepartiesxyz.ru', 'http://localhost:3001'],
     credentials: true,
   }),
 );

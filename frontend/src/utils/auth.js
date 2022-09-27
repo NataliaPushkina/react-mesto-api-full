@@ -1,5 +1,5 @@
 export const BASE_URL = 'https://api.pushkina.nomorepartiesxyz.ru';
-// export const BASE_URL = 'http://localhost:4000';
+// export const BASE_URL = 'http://localhost:3000';
 
 const getResponseData = (res) => {
   if (!res.ok) {
