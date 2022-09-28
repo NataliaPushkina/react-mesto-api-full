@@ -259,6 +259,7 @@ function App() {
       .getUserInfo()
       .then((userData) => {
         setLoggedIn(true);
+        setUserEmail(userData.email);
         setCurrentUser(userData);
         history.push('/');
       })
@@ -280,8 +281,6 @@ function App() {
         });
     }
   }, [loggedIn, history]);
-
-  console.log(loggedIn);
 
   // useEffect(() => {
   //   if (loggedIn) {
