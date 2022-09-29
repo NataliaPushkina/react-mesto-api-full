@@ -1,7 +1,6 @@
 class Api {
   constructor(url) {
     this._url = url;
-    // this._authorization = authorization;
   }
 
   _getResponseData(res) {
@@ -117,13 +116,7 @@ class Api {
       return this._getResponseData(res);
     });
   }
-  // setAuth(token) {
-  //   console.log(token);
-  //   this._authorization=`Bearer ${token}`;
-  // }
 }
 
 const api = new Api('https://api.pushkina.nomorepartiesxyz.ru');
-// const api = new Api('http://localhost:3000');
-// api.setAuth(localStorage.getItem('token'));
 export default api;

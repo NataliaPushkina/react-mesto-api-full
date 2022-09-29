@@ -193,29 +193,12 @@ function App() {
       });
   }
 
-  // function tokenCheck() {
-  //   const jwt = localStorage.getItem("jwt");
-  //   if (!jwt) {
-  //     return;
-  //   } else {
-  //     auth
-  //       .checkToken(jwt)
-  //       .then((res) => {
-  //         // setUserEmail(res.data.email);
-  //         console.log(jwt);
-  //         setLoggedIn(true);
-  //       })
-  //       .catch((err) => console.log(err));
-  //   }
-  // }
-
   function handleLogin(email, password) {
     auth
       .authorize(email, password)
       .then((res) => {
         setUserEmail(email);
         setLoggedIn(true);
-        // localStorage.setItem("jwt", res.token);
       })
       .catch((err) => {
         setRegistrationSuccess(false);
@@ -244,15 +227,10 @@ function App() {
     .logout()
     .then((res) => {
       setLoggedIn(false);
-      // localStorage.removeItem("jwt");
       history.push("/sign-in");
       onBurgerClick();
     });
   }
-
-  // useEffect(() => {
-  //   tokenCheck();
-  // }, []);
 
   useEffect(() => {
     api
@@ -281,12 +259,6 @@ function App() {
         });
     }
   }, [loggedIn, history]);
-
-  // useEffect(() => {
-  //   if (loggedIn) {
-  //     history.push("/");
-  //   }
-  // }, [loggedIn, history]);
 
   return (
     <CurrentUserContext.Provider value={currentUser}>

@@ -144,8 +144,6 @@ const getUserInfo = async (req, res, next) => {
 const logout = async (req, res, next) => {
   try {
     await res.clearCookie('jwt').send({ message: 'Bye!' });
-    // res.redirect('/signin');
-    // res.end();
   } catch (err) {
     next(err);
   }

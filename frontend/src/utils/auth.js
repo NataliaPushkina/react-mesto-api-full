@@ -1,5 +1,4 @@
 export const BASE_URL = 'https://api.pushkina.nomorepartiesxyz.ru';
-// export const BASE_URL = 'http://localhost:3000';
 
 const getResponseData = (res) => {
   if (!res.ok) {
@@ -37,13 +36,3 @@ export const logout = () => {
     headers,
   }).then((response) => getResponseData(response));
 };
-
-// export const checkToken = (token) => {
-//   return fetch(`${BASE_URL}/users/me`, {
-//     method: "GET",
-//     headers: {
-//       ...headers,
-//       authorization: `Bearer ${token}`,
-//     },
-//   }).then((response) => getResponseData(response));
-// };

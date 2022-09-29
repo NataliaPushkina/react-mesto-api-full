@@ -38,7 +38,6 @@ const deleteCard = async (req, res, next) => {
     if (!card) {
       return next(new NotFoundError('Передан несуществующий _id карточки'));
     }
-    // if (!card.owner.equals(req.user._id)) {}
     if (req.user._id !== card.owner.toString()) {
       return next(new ForbiddenError('Можно удалять только свои карточки'));
     }
