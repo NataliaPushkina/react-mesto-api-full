@@ -1,11 +1,10 @@
-# react-mesto-api-full
-Репозиторий для приложения проекта Mesto, включающий фронтенд и бэкенд части приложения со следующими возможностями: авторизации и регистрации пользователей, операции с карточками и пользователями. 
+#Проект «Mesto»
+** Функционал: авторизация и редактирование данных пользователя, добавление и удаление карточки с фото и описанием, валидация форм.
 
-Адрес репозитория: https://https://github.com/NataliaPushkina/react-mesto-api-full
+Frontend-часть
+Технологии: HTML, CSS, JavaScript, React.js, Webpack, Git
+Ссылка на проект: https://github.com/NataliaPushkina/react-mesto-api-full/tree/main/frontend
 
-Ссылки на проект
-IP-адрес 84.201.152.10
-
-Frontend https://pushkina.nomorepartiesxyz.ru
-
-Backend https://api.pushkina.nomorepartiesxyz.ru
+Backend-часть 
+Технологии: Express.js, Node.js, MongoDB
+Ссылка на проект: https://github.com/NataliaPushkina/react-mesto-api-full/tree/main/backend
