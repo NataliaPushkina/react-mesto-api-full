@@ -21,7 +21,7 @@
 
 **Технологии:** 
 * Express.js
-* Node.json
+* Node.js
 * MongoDB
 
 Ссылка на проект: https://github.com/NataliaPushkina/react-mesto-api-full/tree/main/backend
